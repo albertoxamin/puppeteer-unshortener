@@ -1,0 +1,11 @@
+{
+	"name": "puppeteer-unshorten",
+	"version": "1.0.0",
+	"description": "Unshortens url",
+	"private": true,
+	"license": "MIT",
+	"dependencies": {
+	  "chrome-aws-lambda": "^1.17.1",
+	  "puppeteer-core": "^1.17.0"
+	}
+  }
