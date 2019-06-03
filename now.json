@@ -1,9 +1,12 @@
 {
+    "name": "puppeteer-unshorten",
     "version": 2,
     "builds": [
-        { "src": "screenshot.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } }
+		{ "src": "public/*", "use": "@now/static" },
+        { "src": "unshorter.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } }
     ],
     "routes": [
-        { "src": "/(.+)", "dest": "/screenshot.js" }
+		{ "src": "/", "dest": "/public/index.html" },
+        { "src": "/(.+)", "dest": "/unshorter.js" }
     ]
 }
